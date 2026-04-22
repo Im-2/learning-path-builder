@@ -159,3 +159,29 @@
   border-radius: 100px;
   font-size: 0.875rem;
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .roadmap-node {
+    gap: 1rem;
+  }
+  
+  .node-marker {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+  
+  .timeline-line {
+    left: 18px;
+  }
+  
+  .node-content {
+    padding: 1.25rem;
+  }
+  
+  .node-header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

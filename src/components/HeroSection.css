@@ -206,3 +206,34 @@
     transform: translateY(0);
   }
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: clamp(2.5rem, 8vw, 3rem);
+  }
+  
+  .input-group {
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 1rem;
+    gap: 0.5rem;
+  }
+  
+  .input-prefix {
+    padding-left: 0;
+  }
+  
+  .hero-input {
+    text-align: center;
+    padding: 0.5rem;
+    width: 100%;
+  }
+  
+  .hero-submit {
+    width: 100%;
+    border-radius: 12px;
+    height: 48px;
+    margin-right: 0;
+  }
+}

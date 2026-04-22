@@ -136,3 +136,18 @@
 .text-center {
   text-align: center;
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .app-header {
+    padding: 1rem;
+  }
+  
+  .main-content {
+    padding: 2rem 1rem;
+  }
+  
+  .roadmap-header h1 {
+    font-size: 2rem;
+  }
+}
