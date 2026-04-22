@@ -35,7 +35,7 @@ Return 4 to 6 phases in the nodes array. Ensure it is perfectly valid JSON.
 `;
 
 export async function generateLearningPath(goal: string, apiKey: string): Promise<LearningPath> {
-  let modelName = "gemini-2.0-flash";
+  let modelName = "gemini-2.5-flash-lite";
   let url = `https://generativelanguage.googleapis.com/v1/models/${modelName}:generateContent?key=${apiKey}`;
 
   const requestBody = {
@@ -64,8 +64,8 @@ export async function generateLearningPath(goal: string, apiKey: string): Promis
           ?.map((m: any) => m.name.replace('models/', ''));
         
         if (validModels && validModels.length > 0) {
-          // Prefer 2.0 flash over 2.5 flash to avoid high demand
-          modelName = validModels.find((m: string) => m.includes('2.0-flash')) || validModels[0];
+          // Prefer 2.5 flash lite over other models to avoid high demand and quota limits
+          modelName = validModels.find((m: string) => m.includes('2.5-flash-lite')) || validModels[0];
           url = `https://generativelanguage.googleapis.com/v1/models/${modelName}:generateContent?key=${apiKey}`;
           
           response = await fetch(url, {
