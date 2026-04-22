@@ -1,4 +1,3 @@
-import React from 'react';
 import { LearningNode } from '../lib/gemini';
 import { Clock, BookOpen, Wrench, TerminalSquare } from 'lucide-react';
 import './Roadmap.css';
